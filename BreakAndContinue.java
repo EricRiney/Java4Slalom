@@ -1,19 +1,41 @@
-class BreakAndContinue {
+import java.io.*;
+
+public class BreakAndContinue {
     public static void main(String args[]){
-        // Illustrating break statement (execution stops when value of i becomes to 4.)
-        System.out.println("Break Statement\n....................");
 
-        for(int i=1;i<=5;i++){
-            if(i==4) break;
-            System.out.println(i);
-        }
+        int a = 3;
+        int b = 6;
+        
+        b = b - a;
+        a = a + b;
+        b = a - b;
+        System.out.println(a);
+        System.out.println(b);
 
-        // Illustrating continue statement (execution skipped when value of i becomes to 1.)
-        System.out.println("Continue Statement\n....................");
-
-        for(int i=1;i<=5;i++){
-            if(i==1) continue;
-            System.out.println(i);
-        }
+        FreshJuice juice = new FreshJuice();
+        juice.size = FreshJuice.FreshJuiceSize.MEDIUM ;
+        System.out.println("Size: " + juice.size);
     }
+}
+class FreshJuice {
+   enum FreshJuiceSize{ SMALL, MEDIUM, LARGE }
+   FreshJuiceSize size;
+}
+
+
+// If we consider a dog, then its state is - name, breed, color, 
+// and the behavior is - barking, wagging the tail, running.
+class Dog {
+   String breed;
+   int age;
+   String color;
+
+   void barking() {
+   }
+
+   void hungry() {
+   }
+
+   void sleeping() {
+   }
 }
