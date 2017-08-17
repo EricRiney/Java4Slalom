@@ -5,15 +5,13 @@ import java.util.Scanner;
 public class ScalaSucks {
 
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("solutions_test_file1.csv"));
-        scanner.useDelimiter(",");
-        while(scanner.hasNext()){
-            System.out.print(scanner.next()+"|");
-        }
-        scanner.close();
-    }
+        int a, b;
+        a = 10;
+        b = (a == 1) ? 20: 30;
+        System.out.println( "Value of b is : " +  b );
 
-    public void SillyReader (Scanner s) {
+        b = (a == 10) ? 20: 30;
+        System.out.println( "Value of b is : " + b );
         
     }
 
